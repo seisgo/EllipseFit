@@ -1,23 +1,32 @@
-## [椭圆表示与最小二乘拟合](http://xueshu.baidu.com/s?wd=paperuri%3A%28370ae8361e9894246e4d85684c1a5d36%29&filter=sc_long_sign&tn=SE_xueshusource_2kduw22v&sc_vurl=http%3A%2F%2Fwww.cnki.com.cn%2FArticle%2FCJFDTotal-BJHK200803011.htm&ie=utf-8&sc_us=15063267203367957480)
+## 椭圆表示与最小二乘拟合
 ### 椭圆的表示方法
+> 参考[Ellipse](https://en.wikipedia.org/wiki/Ellipse)中[In analytic geometry](https://en.wikipedia.org/wiki/Ellipse#In_analytic_geometry)章节，包括以下两种表示形式及相互的转换。
+
 > 在二维平面坐标系中，[椭圆](https://en.wikipedia.org/wiki/Ellipse)一般可以用两种形式来表示，一种是利用[圆锥曲线方程](https://en.wikipedia.org/wiki/Conic_section)的代数形式表示，如下式所示：
+
 $$
 ax^2+bxy+cy^2+dx+ey+f=0.(1)
 $$
-另外一种更直观的方式是用平面坐标系的几何参数表示，即椭圆中心位置(x<sub>c</sub>,y<sub>c</sub>)，长轴和短轴(a,b)，长轴的转角$\theta$。二维平面里的任意椭圆都可以用这5个参数唯一确定。
+
+> 另外一种更直观的方式是用平面坐标系的几何参数表示，即椭圆中心位置(x<sub>c</sub>,y<sub>c</sub>)，长轴和短轴(a,b)，长轴的转角$\theta$。二维平面里的任意椭圆都可以用这5个参数唯一确定。
 两种表示形式的参数可以通过以下公式进行转换：
+
 $$
 x_c=\frac{be-2cd}{4ac-b^2},(2)
 $$
+
 $$
 y_c=\frac{bd-2ae}{4ac-b^2},(3)
 $$
+
 $$
 a=2\sqrt{\frac{-2f}{a+c-\sqrt{b^2+\left(\frac{a-c}{f}\right)^2}}},(4)
 $$
+
 $$
 b=2\sqrt{\frac{-2f}{a+c+\sqrt{b^2+\left(\frac{a-c}{f}\right)^2}}},(5)
 $$
+
 $$
 \theta=\frac{1}{2}atan\left(\frac{b}{a-c}\right).(6)
 $$
@@ -25,17 +34,23 @@ $$
 ### 最小二乘法椭圆拟合方法
 > 最小二乘法椭圆拟合是较常用的椭圆拟合方法，最小二乘法是在随机误差为正态分布时，由最大似然法推出的一个最优估计技术，它可使测量误差的平方和最小，因此也被视为从一组测量值中求出一组未知量的最可信赖的方法之一。最小二乘技术主要是寻找参数集合，从而最小化数据点与椭圆之间的距离度量，这里的距离度量常见的有几何距离和代数距离。几何距离表示某点到曲线最近点的距离。平面内某点(x<sub>0</sub>,y<sub>0</sub>)到方程$f(x,y)=0$所代表曲线的代数距离就是$f(x_0,y_0)$。以下是以代数距离作为距离度量介绍最小二乘法。
 假设一般形式的椭圆方程如式(1)所列，为了避免零解，并将解的任何整数倍都视为对同一椭圆的表述，对参数最一些限制，约束条件设为A+C=1.显然，直接应用上述方程对边缘检测后的离散点进行最小二乘处理，就可以得到方程中的各系数。也即，求目标函数
+
 $$
 f\left(a,b,c,d,e\right)=\sum\limits_{i=0}^n{\left(ax_i^2+bx_iy_i+cy_i^2+dx_i+ey_i+f\right)^2}.(7)
 $$
-的最小值来确定各系数。再由极值原理，欲使$f(a,b,c,d,e)$值为最小，必有
+
+> 的最小值来确定各系数。再由极值原理，欲使$f(a,b,c,d,e)$值为最小，必有
+
 $$
 \frac{\partial{f}}{\partial{b}}=\frac{\partial{f}}{\partial{c}}=\frac{\partial{f}}{\partial{d}}=\frac{\partial{f}}{\partial{e}}=\frac{\partial{f}}{\partial{f}}=0.(8)
 $$
-由此可得一个线性方程组，然后应用求解线性方程组的算法（如全主元高斯消去法），结合约束条件，就可以求得方程系数a、b、c、d、e、f的值。
+
+> 由此可得一个线性方程组，然后应用求解线性方程组的算法（如全主元高斯消去法），结合约束条件，就可以求得方程系数a、b、c、d、e、f的值。
 
 ## Note
 > **圆锥曲线曲线包括圆、椭圆、抛物线、双曲线四种曲线类型，故采用圆锥曲线代数形式开展椭圆拟合，在某些情况下会拟合椭圆失败。**
+
+> **[Conic section](https://en.wikipedia.org/wiki/Conic_section)中[1.5.2	Discriminant](https://en.wikipedia.org/wiki/Conic_section#Discriminant)章节提供了四种曲线的判别方法，判别依据是b<sup>2</sup>-4ac与0的关系。**
 
 
 ## Reference
