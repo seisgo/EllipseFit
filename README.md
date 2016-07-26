@@ -8,5 +8,5 @@ search an effective and robost method.
 
 ## Methods comparison through matlab code
 - Description: make comparison of five types of ellipse fitting methods or functions
-- codes: ./matlab
-- figures: ./figures
+- Codes: ./matlab
+- Figures: ./figures
