@@ -1,4 +1,12 @@
 # EllipseFit
-Ellipse Fitting
+## Abstract
+- Study theories of ellipse fitting
+- Coding to realize ellipse fitting, _matlab_ and _C++_
+- Make comparison of different ellipse fitting theories or functions
+- Considering the disadvantages of least square fitting methods for conic section,
+search an effective and robost method. 
 
-**应用最小二乘法对圆锥曲线方程代数形式表达的椭圆进行拟合，考虑到圆锥曲线除表示椭圆外，还会表示圆、抛物线与双曲线，因此会出现对某些散点拟合结果不是_椭圆_的情况，即椭圆拟合失败。**
+## Methods comparison through matlab code
+- Description: make comparison of five types of ellipse fitting methods or functions
+- codes: ./matlab
+- figures: ./figures
