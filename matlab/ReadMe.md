@@ -8,10 +8,12 @@
  (4) noisy ellipse shaped scatter data;
 >- Output: (1) hyperbolaData.mat; (2) hyperEllipData.mat;
            (3) ellipseData.mat;   (4) noisyEllipData.mat;
+
 ### 2. Do RANSAC filtering before ellipse fitting for noisy data (_Optional_)
 >- Matlab file: ellipseDataFilter_RANSAC.m
 >- Type: function
 >- Usage: called by main program
+
 ### 3. Do ellipse fitting 
 >- Description: 5 types of functions provided
 >- Note: some following methods may fail in certain circumstances
@@ -21,11 +23,13 @@
 >- **funcEllipseFit_BFisher.m**: direct fit function provided by _Bob Fisher_
 >- **funcEllipseFit_direct.m**: direct fit function (same as Bob Fisher's) provided by _Nikolai Chernov_
 >- **funcEllipseFit_RBrown.m**: function provided by _Richard Brown_
+
 ### 4. Plot fitted ellipse (_For certain case_)
 >- Matlab file: plotellipse.m
 >- Type: function
 >- Usage: called by main program
 >- Note: particularly for fitted ellipse by _funcEllipseFit_RBrown_
+
 ### 5. Main program calling above functions and utilizing above data
 >- Matlab file: doEllipseFit.m
 >- Description: (1) load saved data; (2) choose whether do RANSAC filtering;
