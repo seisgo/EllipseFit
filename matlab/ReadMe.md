@@ -34,3 +34,11 @@
 >- Matlab file: doEllipseFit.m
 >- Description: (1) load saved data; (2) choose whether do RANSAC filtering;
                 (3) do ellipse fitting; (4) plot fitted ellipse and make some comparison
+
+### Appendix
+>- Matlab file: compareEllipsePlotForm.m
+>- Description: compare ellipse plot form as plot and plotm, 
+                where 'plot' plots ellipse in Cartesian coordinate;
+                while 'plotm' plots ellipse in map coordinate.
+>- Html file: compareEllipsePlotForm.html, compareEllipsePlotForm.png 
+              and compareEllipsePlotForm_01.png in html directory.

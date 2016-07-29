@@ -2,18 +2,18 @@
 clear; clc; close all;
 RBrownOK = 1;   % In some case, Richard Browm method doesn't work
 %% Input Raw Data
-%{
+%
 % Fit-failed data from Prestack Analysis in EPoffice
 load hyperbolaData;
 RBrownOK = 0;
-%
+%{
 % Fit-success data from Prestack Analysis in EPoffice
 load hyperEllipData;
 RBrownOK = 0;
-%}
+%
 % Simple Test Data
 load ellipseData;
-%{
+%
 % Random Noisy Ellipse Data
 load noisyEllipData
 %}
@@ -67,6 +67,7 @@ plot(lat,lon,'c');
 end
 
 %% Do Ellipse Fitting by calling funcEllipseFit_BFisher, a direct method
+
 ellipse_1 = funcEllipseFit_BFisher(x(:,1), x(:,2));
 maxR=max(ellipse_1(3),ellipse_1(4));
 minR=min(ellipse_1(3),ellipse_1(4));

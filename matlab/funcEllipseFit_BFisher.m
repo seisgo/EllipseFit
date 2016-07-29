@@ -22,11 +22,11 @@ if nargin == 0
   % Create an ellipse
   t = linspace(0,2);
   
-  Rx = 300
-  Ry = 200
-  Cx = 250
-  Cy = 150
-  Rotation = .4 % Radians
+  Rx = 300;
+  Ry = 200;
+  Cx = 250;
+  Cy = 150;
+  Rotation = .4; % Radians
   
   x = Rx * cos(t); 
   y = Ry * sin(t);
