@@ -56,14 +56,14 @@ search an effective and robost method.
 
     1. Perfect ellipse-shaped scatters
 
-        ![](./figures/ellipse_RANSAC.tif)
+        ![](./figures/ellipse_RANSAC.png)
         
         For perfect ellipse-shaped scatters, all above methods make perfect
         ellipse fitting implementation.
     
     2. Hyperbola-Ellipse scatters
 
-        ![](./figures/hyperEllipse_RANSAC.tif)
+        ![](./figures/hyperEllipse_RANSAC.png)
 
         For hyperbola-shaped scatters with some distribution features of ellipse,
         funcEllipseFit_nlinfit method could fitted a hyperbola, funcEllipseFit_OGal
@@ -73,7 +73,7 @@ search an effective and robost method.
 
     3. Hyperbola-shaped scatters
 
-        ![](./figures/hyperbola_RANSAC.tif)
+        ![](./figures/hyperbola_RANSAC.png)
         
         For hyperbola-shaped scatters, funcEllipseFit_nlinfit method could fit
         a hyperbola, and direct ellipse fitting methods gave a fitted ellipse,
@@ -85,8 +85,8 @@ search an effective and robost method.
         Despite the fitting comparison of different ellipse fitting methods, the
         effect of RANSAC is also demonstrated.
 
-        ![](./figures/noisyEllipse.tif)
-        ![](./figures/noisyEllipse_RANSAC.tif)
+        ![](./figures/noisyEllipse.png)
+        ![](./figures/noisyEllipse_RANSAC.png)
 
         For noisy scattered points, RANSAC filtering can effectively eliminate 
         the influence of noise, and be helpful for better ellipse fitting.
