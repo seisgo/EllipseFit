@@ -37,9 +37,9 @@ search an effective and robost method.
         - funcEllipseFit_BFisher
             
             Description: **Direct** least squares fitting of ellipse with several 
-            advantages: (i) It is ellipse-specic so that even bad data will
+            advantages: (i) It is ellipse-specic so that even bad data will
             always return an ellipse; (ii) It can be solved naturally by a
-            generalized eigensystem and (iii) it is extremely robust, ecient
+            generalized eigensystem and (iii) it is extremely robust, ecient
             and easy to implement. This method is implemented by Bob Fisher,
             and geometric ellipse parameters are returned.
 
@@ -55,16 +55,16 @@ search an effective and robost method.
       and make some comparison.
 
     1. Perfect ellipse-shaped scatters
-
+    
         ![](./figures/ellipse_RANSAC.png)
         
         For perfect ellipse-shaped scatters, all above methods make perfect
         ellipse fitting implementation.
     
     2. Hyperbola-Ellipse scatters
-
+    
         ![](./figures/hyperEllipse_RANSAC.png)
-
+        
         For hyperbola-shaped scatters with some distribution features of ellipse,
         funcEllipseFit_nlinfit method could fitted a hyperbola, funcEllipseFit_OGal
         and both direct ellipse fitting methods gave a fitted ellipse, where fitted
@@ -72,7 +72,7 @@ search an effective and robost method.
         funcEllipseFit_RBrown method failed.
 
     3. Hyperbola-shaped scatters
-
+    
         ![](./figures/hyperbola_RANSAC.png)
         
         For hyperbola-shaped scatters, funcEllipseFit_nlinfit method could fit
@@ -84,10 +84,10 @@ search an effective and robost method.
         For this example, Random Sample Consensus (RANSAC) filtering are performed.
         Despite the fitting comparison of different ellipse fitting methods, the
         effect of RANSAC is also demonstrated.
-
+        
         ![](./figures/noisyEllipse.png)
         ![](./figures/noisyEllipse_RANSAC.png)
-
+        
         For noisy scattered points, RANSAC filtering can effectively eliminate 
         the influence of noise, and be helpful for better ellipse fitting.
 
