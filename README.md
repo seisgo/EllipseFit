@@ -105,4 +105,4 @@ What's more, both the matlab and C++ programs are implemented, which can be
 used in industrial application.
 
 ## Reference
-1. [Fitzgibbon, A., et al. (1999). "Direct least square fitting of ellipses." IEEE Transactions on pattern analysis and machine intelligence 21(5): 476-480.](./1999-Fitzgibbon-Direct least square fitting of ellipses.pdf)
+1. [Fitzgibbon, A., et al. (1996). "Direct least square fitting of ellipses." IEEE Transactions on pattern analysis and machine intelligence 21(5): 476-480.](./1996-Fitzgibbon-Direct least square fitting of ellipses.pdf)
