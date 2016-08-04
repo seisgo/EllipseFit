@@ -6,7 +6,7 @@
 - Considering the disadvantages of least square fitting methods for conic section,
 search an effective and robost method. 
 
-## Methods comparison through matlab code
+## Methods Comparison Through Matlab Code
 - Description: make comparison of five types of ellipse fitting methods or functions
 - Codes: ./matlab
 - Figures: ./figures
@@ -34,7 +34,7 @@ search an effective and robost method.
             points to the fitted ellipse, with Bookstein or Euclidean-invariant
             constraints. This method is implemented by Richard Brown.
 
-        - funcEllipseFit_BFisher
+        - [funcEllipseFit_BFisher](http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/FITZGIBBON/ELLIPSE/)
             
             Description: **Direct** least squares fitting of ellipse with several 
             advantages: (i) It is ellipse-specific so that even bad data will
@@ -52,7 +52,7 @@ search an effective and robost method.
 - Examples
 
      The examples are presented to illustrate the effectiveness of above methods,
-      and make some comparison.
+     and make some comparison.
 
     1. Perfect ellipse-shaped scatters
     
@@ -95,3 +95,14 @@ search an effective and robost method.
         the best performance. 
 
 ## Direct Ellipse Fitting Method Implementation in C++
+
+## Conclusions
+Through the methods description and examples demonstration, we can conclude
+that direct least squares method is perfect in ellipse fitting, with efficiency,
+robustness and accuracy.
+
+What's more, both the matlab and C++ programs are implemented, which can be
+used in industrial application.
+
+## Reference
+1. [Fitzgibbon, A., et al. (1999). "Direct least square fitting of ellipses." IEEE Transactions on pattern analysis and machine intelligence 21(5): 476-480.](./1999-Fitzgibbon-Direct least square fitting of ellipses.pdf)
