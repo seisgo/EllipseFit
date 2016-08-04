@@ -37,9 +37,9 @@ search an effective and robost method.
         - funcEllipseFit_BFisher
             
             Description: **Direct** least squares fitting of ellipse with several 
-            advantages: (i) It is ellipse-specic so that even bad data will
+            advantages: (i) It is ellipse-specific so that even bad data will
             always return an ellipse; (ii) It can be solved naturally by a
-            generalized eigensystem and (iii) it is extremely robust, ecient
+            generalized eigensystem and (iii) it is extremely robust, efficient
             and easy to implement. This method is implemented by Bob Fisher,
             and geometric ellipse parameters are returned.
 
