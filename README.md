@@ -10,3 +10,88 @@ search an effective and robost method.
 - Description: make comparison of five types of ellipse fitting methods or functions
 - Codes: ./matlab
 - Figures: ./figures
+- Methods
+    1. General Conic Fitting With Least Squares Method
+        - funcEllipseFit_nlinfit
+
+            Description: General conic fitting by calling _nlinfit_ function in matlab,
+            and return fitted conic coefficients of ellipse, parabola or hyperbola,
+            depending on the distribution of scattered points. 
+
+        - funcEllipseFit_OGal
+            
+            Description: Ellipse fitting using least squares criterion and return
+            structure containing fitted status and geometric parameters of ellipse.
+            If ellipse fitting failed, status is parabola or hyperbola and geometric
+            parameters are null; if ellipse fitting succeeded, status is null and
+            geometric parameters are returned.This method is implemented by Ohad Gal.
+
+    2. Constrainted Conic Fitting with Least Squares Method
+        - funcEllipseFit_RBrown
+            
+            Description: Ellipse fitting using nonlinear least squares by
+            optimising the squared sum of orthogonal distances from the 
+            points to the fitted ellipse, with Bookstein or Euclidean-invariant
+            constraints. This method is implemented by Richard Brown.
+
+        - funcEllipseFit_BFisher
+            
+            Description: **Direct** least squares fitting of ellipse with several 
+            advantages: (i) It is ellipse-specic so that even bad data will
+            always return an ellipse; (ii) It can be solved naturally by a
+            generalized eigensystem and (iii) it is extremely robust, ecient
+            and easy to implement. This method is implemented by Bob Fisher,
+            and geometric ellipse parameters are returned.
+
+        - funcEllipseFit_direct
+            
+            Description: Another implementation of **direct ellipse fitting**
+            developed by Bob Fisher and his coworkers. This method is 
+            implemented by Nikolai Chernov, and conic coefficients of ellipse
+            are returned.
+- Examples
+
+     The examples are presented to illustrate the effectiveness of above methods,
+      and make some comparison.
+
+    1. Perfect ellipse-shaped scatters
+
+        ![](./figures/ellipse_RANSAC.tif)
+        
+        For perfect ellipse-shaped scatters, all above methods make perfect
+        ellipse fitting implementation.
+    
+    2. Hyperbola-Ellipse scatters
+
+        ![](./figures/hyperEllipse_RANSAC.tif)
+
+        For hyperbola-shaped scatters with some distribution features of ellipse,
+        funcEllipseFit_nlinfit method could fitted a hyperbola, funcEllipseFit_OGal
+        and both direct ellipse fitting methods gave a fitted ellipse, where fitted
+        ellipse by funcEllipseFit_OGal may a little diverge from scatters, while
+        funcEllipseFit_RBrown method failed.
+
+    3. Hyperbola-shaped scatters
+
+        ![](./figures/hyperbola_RANSAC.tif)
+        
+        For hyperbola-shaped scatters, funcEllipseFit_nlinfit method could fit
+        a hyperbola, and direct ellipse fitting methods gave a fitted ellipse,
+        while other methods failed.
+    
+    4. Perfect ellipse-shaped scatters
+        
+        For this example, Random Sample Consensus (RANSAC) filtering are performed.
+        Despite the fitting comparison of different ellipse fitting methods, the
+        effect of RANSAC is also demonstrated.
+
+        ![](./figures/noisyEllipse.tif)
+        ![](./figures/noisyEllipse_RANSAC.tif)
+
+        For noisy scattered points, RANSAC filtering can effectively eliminate 
+        the influence of noise, and be helpful for better ellipse fitting.
+
+        For different ellipse fitting methods, the direct methods always present
+        the best performance. 
+
+## Direct Ellipse Fitting Method Implementation in C++
