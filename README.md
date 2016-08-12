@@ -95,6 +95,17 @@ search an effective and robost method.
         the best performance. 
 
 ## Direct Ellipse Fitting Method Implementation in C++
+- Description: Implement direct ellipse fitting method in C++ template class
+- Folder: ./C++
+- Class: DirectEllipseFit (DirectEllipseFit.h & DirectEllipseFit.cpp)
+- Usage
+    1. Create object
+
+        DirectEllipseFit<type> ellipFit(xVec, yVec);
+
+    2. Perform ellipse fitting and get fitted ellipse
+
+        Ellipse ellip = ellipFit.doEllipseFit();
 
 ## Conclusions
 Through the methods description and examples demonstration, we can conclude
