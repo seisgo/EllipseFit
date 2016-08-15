@@ -1,2 +1,3 @@
 $ cat .gitattributes
 EllipseFit.html linguist-vendored=true
+matlab/* linguist-vendored=true
