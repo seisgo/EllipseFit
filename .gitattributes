@@ -1,2 +1,2 @@
 $ cat .gitattributes
-*.rb linguist-language=HTML
+EllipseFit.html linguist-vendored=true
