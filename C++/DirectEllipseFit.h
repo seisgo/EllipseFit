@@ -20,12 +20,11 @@
 #ifndef DIRECTELLIPSEFIT_H
 #define DIRECTELLIPSEFIT_H
 
-#include <algo_global.h>
 #include <QVector>
 #include <clapack.h>
 #include <QDebug>
 
-class EP_ALGO_EXPORT Ellipse
+class Ellipse
 {
 public:
     Ellipse();
